@@ -9,17 +9,15 @@ class Messenger {
         return "Hello World!";
         }
         
-        if (new Date(time)=="Invalid Date") { return("err - format no valid")}
-        if (time==null) { return("err - format no valid")}
+        if (new Date(time)=="Invalid Date") { return("error - formato no valido")}
+        if (time==null) { return("error - formato no valido")}
         let dateTime =  new Date(time);
-        if((dateTime.getHours() >= 0) && (dateTime.getHours() < 4)){
-            return "Good nite";
-        } else  if((dateTime.getHours() >= 4) && (dateTime.getHours() < 12)){
-            return "Good morning";
+        if((dateTime.getHours() >= 0) && (dateTime.getHours() < 12)){
+            return "Buenos dias";
         }else  if((dateTime.getHours() >= 12) && (dateTime.getHours() < 18)){
-            return "Good evening";
+            return "Buenas tardes";
         }else  if((dateTime.getHours() >= 18) && (dateTime.getHours() <= 23)){
-            return "Good nite";
+            return "Buenas noches";
         }
     } 
 }

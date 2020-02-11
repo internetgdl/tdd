@@ -30,7 +30,7 @@ describe('Messenger', function() {
             //Act
             let message =  mesenger.getMessage(datetime);
             //Assert
-            expect(message).to.equal("Good nite");
+            expect(message).to.equal("Buenos dias");
              done();
         });
     });
@@ -46,7 +46,7 @@ describe('Messenger', function() {
         //Act
         let message =  mesenger.getMessage(datetime);
         //Assert
-        expect(message).to.equal("Good morning");
+        expect(message).to.equal("Buenos dias");
          done();
     });
 });
@@ -63,7 +63,7 @@ describe('Messenger', function() {
         //Act
         let message =  mesenger.getMessage(datetime);
         //Assert
-        expect(message).to.equal("Good morning");
+        expect(message).to.equal("Buenos dias");
          done();
     });
     it('Get morning time (Many)', function(done){
@@ -77,7 +77,7 @@ describe('Messenger', function() {
         //Act
         let message =  mesenger.getMessage(datetime);
         //Assert
-        expect(message).to.equal("Good nite");
+        expect(message).to.equal("Buenas noches");
          done();
     });
     it('Get morning time (Many)', function(done){
@@ -91,7 +91,7 @@ describe('Messenger', function() {
         //Act
         let message =  mesenger.getMessage(datetime);
         //Assert
-        expect(message).to.equal("Good evening");
+        expect(message).to.equal("Buenas tardes");
          done();
     });
     
@@ -109,7 +109,7 @@ describe ('Get time (Bounds)', function() {
         //Act
         let message =  mesenger.getMessage(datetime);
         //Assert
-        expect(message).to.equal("Good nite");
+        expect(message).to.equal("Buenas noches");
          done();
     });
 });
@@ -125,7 +125,7 @@ describe ('Get time (Interface)', function() {
         //Act
         let message =  mesenger.getMessage(text);
         //Assert
-        expect(message).to.equal("err - format no valid");
+        expect(message).to.equal("error - formato no valido");
          done();
     });
 });
@@ -140,7 +140,7 @@ describe ('Get time (Exception)', function() {
         //Act
         let message =  mesenger.getMessage(object);
         //Assert
-        expect(message).to.equal("err - format no valid");
+        expect(message).to.equal("error - formato no valido");
          done();
     });
    
