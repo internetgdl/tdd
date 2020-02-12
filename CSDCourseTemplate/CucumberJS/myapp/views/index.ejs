@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        function validateHhMm(inputField) {
+            var isValid = /^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$/.test(inputField.value);
+    
+            if (isValid) {
+                inputField.style.backgroundColor = '#bfa';
+            } else {
+                inputField.style.backgroundColor = '#fba';
+            }
+            return isValid;
+        } 
+            function validate(inputValue){
+
+        }
+    </script>
 </head>
 <body>
-    <input type="text" /> Hora
+        <form action = "http://127.0.0.1:3000/" method = "POST">
+
+    <input type="text" name="hora" id="hora" onchange="validateHhMm(this);" /> Hora
     <br/>
     <select id="idioma" name="idioma">
         <option value="Español">Español</option>
     </select> Idioma
     <br/>
-    <input type="button" value="Go"/>
-    <h1><%=message%> </h1>
+    <input type="submit" value="Go"/>
+</form>
+    <h1><%=message%></h1>
 </body>
 </html>

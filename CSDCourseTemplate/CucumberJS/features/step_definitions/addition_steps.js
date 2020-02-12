@@ -1,4 +1,3 @@
-git remote add origin https://github.com/internetgdl/tdd.gitconst assert = require('assert')
 const {Before, Given, When, Then} = require('cucumber');
 const Calculator = require('../../lib/calculator');
 
