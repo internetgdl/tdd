@@ -14,7 +14,7 @@ Given('i go to hello world app', async function () {
   // Write code here that turns the phrase above into concrete actions
   driver = new Builder()
   .forBrowser('chrome')
-  .setChromeOptions(new chrome.Options().windowSize(screen)) 
+  .setChromeOptions(new chrome.Options().headless()) 
   .build();
 
 await driver.get('http://localhost:3000/'); 
