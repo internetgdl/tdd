@@ -27,7 +27,8 @@ app.post('/', function (req, res) {
   let mesenger;
   mesenger = new Messenger( );
   console.log(req.body.hora);
-  var message = mesenger.getMessage(req.body.hora,req.body.idioma); 
+  var datetime = new Date('1970-01-01T' + req.body.hora);
+  var message = mesenger.getMessage(datetime,req.body.idioma); 
   res.render(path.join(__dirname+'/views/index'), {message:message}); 
 });
 
