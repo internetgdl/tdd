@@ -23,15 +23,19 @@
                 document.getElementById("forma").submit();
             }
           }
+
+          function validateForm(){
+            validateHhMm(document.getElementById("hora"))
+          }
       
     </script>
 </head>
 <body>
         <form name="forma" id="forma" action = "http://127.0.0.1:3000/" method = "POST" onsubmit="event.preventDefault(); validateMyForm();">
 
-    <input type="text" name="hora" id="hora" onchange="validateHhMm(this);" /> Hora
+    <input type="text" name="hora" id="hora" onchange="validateHhMm(this);" onclick="validateForm()"/> Hora
     <br/>
-    <select id="idioma" name="idioma">
+    <select id="idioma" name="idioma" onclick="validateForm()">
         <option value="Español">Español</option>
         <option value="English">Inglés</option>
         <option value="Francais">Francés</option>
