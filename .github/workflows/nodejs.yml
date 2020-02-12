@@ -18,6 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install --prefix CSDCourseTemplate/CucumberJS/
-    - run: npm test --prefix CSDCourseTemplate/CucumberJS/
+    - run: npm run-script mocha --prefix CSDCourseTemplate/CucumberJS/
       env:
         CI: true
