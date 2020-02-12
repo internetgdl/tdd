@@ -18,7 +18,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: cd CucumberJS
+    - run: ls
+    - run: cd ../CucumberJS
     - run: npm run-script mocha
       env:
         CI: true
