@@ -2,20 +2,20 @@ Feature: Saludo_Francais
 
   Hello world app
 
-  Scenario: Buenos días
+  Scenario: Bonjour
     Given i go to hello world app
     When i select language 'Francais' and selet hour '08:00'
     Then should see 'Bonjour'
     #node_modules\.bin\cucumber-js
 
-  Scenario: Buenas tardes
+  Scenario: Bonsoir
     Given i go to hello world app
     When i select language 'Francais' and selet hour '13:10'
-    Then should see 'Buenas tardes'
+    Then should see 'Bonsoir'
     #node_modules\.bin\cucumber-js
 
-  Scenario: Buenas noches
+  Scenario: Bonne nout
     Given i go to hello world app
     When i select language 'Francais' and selet hour '19:10'
-    Then should see 'Buenas noches'
+    Then should see 'Bonne nout'
     #node_modules\.bin\cucumber-js
