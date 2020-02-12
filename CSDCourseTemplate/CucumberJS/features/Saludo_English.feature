@@ -6,7 +6,7 @@ Feature: Saludo_Español
   Scenario: Good Morning
     Given i go to hello world app
     When i select language 'English' and selet hour '08:00'
-    Then should see ' Good Morning'
+    Then should see ' npm Good Morning'
     #node_modules\.bin\cucumber-js
 
   Scenario: Good Afternoon

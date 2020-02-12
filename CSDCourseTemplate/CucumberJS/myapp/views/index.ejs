@@ -11,18 +11,23 @@
     
             if (isValid) {
                 inputField.style.backgroundColor = '#bfa';
+                document.getElementById("click").disabled=  false;
             } else {
                 inputField.style.backgroundColor = '#fba';
+                document.getElementById("click").disabled=  true;
             }
             return isValid;
         } 
-            function validate(inputValue){
-
-        }
+          function validateMyForm(){
+           if (document.getElementById("click").disabled==false){
+                document.getElementById("forma").submit();
+            }
+          }
+      
     </script>
 </head>
 <body>
-        <form action = "http://127.0.0.1:3000/" method = "POST">
+        <form name="forma" id="forma" action = "http://127.0.0.1:3000/" method = "POST" onsubmit="event.preventDefault(); validateMyForm();">
 
     <input type="text" name="hora" id="hora" onchange="validateHhMm(this);" /> Hora
     <br/>
@@ -32,7 +37,7 @@
         <option value="Francais">Francais</option>
     </select> Idioma
     <br/>
-    <input id="click" type="submit" value="Go"/>
+    <input id="click" type="submit" value="Go" disabled/>
 </form>
     <h1><%=message%></h1>
 </body>
