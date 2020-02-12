@@ -4,6 +4,7 @@ const path = require('path');
 var bodyParser = require('body-parser');
 const Messenger = require('../lib/messenger');
 app.set('view engine', 'ejs');
+app.use(bodyParser.json()); 
 
 app.use(express.json());
 
@@ -25,8 +26,8 @@ app.post('/', function (req, res) {
   //res.sendFile('./views/index.html');
   let mesenger;
   mesenger = new Messenger( );
-  console.log(req.body.hora)
-  var message = mesenger.getMessage(req.body.hora); 
+  console.log(req.body.hora);
+  var message = mesenger.getMessage(req.body.hora,req.body.idioma); 
   res.render(path.join(__dirname+'/views/index'), {message:message}); 
 });
 
