@@ -22,7 +22,7 @@ await driver.get('http://localhost:3000/');
 });
 
 
-Then('should see {string}', async function (string) {
+Then('should see {string}',{timeout:5000}, async function (string) {
   // Write code here that turns the phrase above into concrete actions
  
   let text = await driver.findElement(By.tagName("body")).getText();
