@@ -3,20 +3,20 @@ Feature: Saludo_Español
 
   Hello world app
 
-  Scenario: Buenos días
+  Scenario: Good Morning
     Given i go to hello world app
-    When i select language 'Español' and selet hour '08:00'
-    Then should see 'Buenos dias'
+    When i select language 'English' and selet hour '08:00'
+    Then should see ' Good Morning'
     #node_modules\.bin\cucumber-js
 
-  Scenario: Buenas tardes
+  Scenario: Good Afternoon
     Given i go to hello world app
-    When i select language 'Español' and selet hour '13:10'
-    Then should see 'Buenas tardes'
+    When i select language 'English' and selet hour '13:10'
+    Then should see 'Good Afternoon'
     #node_modules\.bin\cucumber-js
 
-  Scenario: Buenas noches
+  Scenario: Good Night
     Given i go to hello world app
-    When i select language 'Español' and selet hour '19:10'
-    Then should see 'Buenas noches'
+    When i select language 'English' and selet hour '19:10'
+    Then should see 'Good Night'
     #node_modules\.bin\cucumber-js
