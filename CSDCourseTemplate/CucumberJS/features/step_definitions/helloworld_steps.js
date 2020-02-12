@@ -22,10 +22,19 @@ await driver.get('http://localhost:3000/');
 });
 
 
+When('i select language {string} and selet hour {string}', async function (string, string2) {
+  // Write code here that turns the phrase above into concrete actions
+  let element = await driver.findElement(By.id("hora"));
+  element.sendKeys(string2);
+  let element2 = await driver.findElement(By.id("idioma"));
+  element2.sendKeys(string);
+  await driver.findElement(By.id("click")).click();
+});
+
 Then('should see {string}',{timeout:5000}, async function (string) {
   // Write code here that turns the phrase above into concrete actions
  
-  let text = await driver.findElement(By.tagName("body")).getText();
+  let text = await driver.findElement(By.tagName("h1")).getText();
   assert.equal(text, string);
   driver.close();
   //driver.quit();
