@@ -17,9 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd CSDCourseTemplate/CucumberJS  
-    - run: npm install
-    - run: ls
-    - run: npm run-script mocha
+    - run: npm install --prefix CSDCourseTemplate/CucumberJS/
+    - run: npm run-script mocha --prefix CSDCourseTemplate/CucumberJS/
       env:
         CI: true
